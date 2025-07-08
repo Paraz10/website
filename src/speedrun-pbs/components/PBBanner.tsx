@@ -8,10 +8,11 @@ export type BannerProps = {
 export default function PBBanner({ game_tag, alt }: BannerProps) {
 
     return (
-        <div className="pb-banner">
+        <div>
             <img
-                src={"/public/banners/banner_" + game_tag + ".jpg"}
+                src={"/banners/banner_" + game_tag + ".jpg"}
                 alt={alt}
+                className="pb-banner"
             />
         </div>
 

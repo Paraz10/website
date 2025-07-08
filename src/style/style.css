@@ -12,3 +12,7 @@
 .footer-link {
     text-align: right;
 }
+
+.pb-banner {
+    max-height: 200px;
+}
