@@ -2,6 +2,7 @@ import PBdata from '../data/speedrun-pbs.json';
 
 
 export type PBRunData = {
+    "game"?: string;
     "category": string;
     "category_tag": string;
     "date": string;
@@ -37,11 +38,12 @@ export function getGameByTag(tag: String): PBGameData {
 }
 
 
-export function getRunByCategory(gameTag: string, categoryTag: string): PBRunData{
+export function getRunByCategory(gameTag: string, categoryTag: string): PBRunData {
     const game = getGameByTag(gameTag);
     const run = game.runs.find((run: PBRunData) => run.category_tag === categoryTag);
     if (!run) {
         throw new Error(`Run with category tag ${categoryTag} not found in game ${gameTag}`);
     }
+    run.game = game.game;
     return run;
 }
