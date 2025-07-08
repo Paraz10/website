@@ -4,7 +4,7 @@ function App() {
 
     return (
         <>
-            <h1>Paraz10's website</h1>
+            <h1>Home page</h1>
             <ul>
                 <li>
                     <a href="/speedrun-pbs">
